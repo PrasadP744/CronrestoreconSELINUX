@@ -1,0 +1,14 @@
+[Unit]
+Description=Watch /home/pinnacle/in and /home/pinnacle/dev-in for changes
+
+[Path]
+PathChanged=/home/pinnacle/in
+PathModified=/home/pinnacle/in
+PathChanged=/home/pinnacle/dev-in
+PathModified=/home/pinnacle/dev-in
+
+[Install]
+WantedBy=multi-user.target
+
+
+
