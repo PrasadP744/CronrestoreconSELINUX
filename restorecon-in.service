@@ -1,0 +1,17 @@
+[Unit]
+Description=Run restorecon on /home/pinnacle/in and /home/pinnacle/dev-in
+
+[Service]
+Type=oneshot
+ExecStart=/sbin/restorecon -Rv /home/pinnacle/in /home/pinnacle/dev-in
+
+
+
+####updates the files for docker containers and also adds recursive context to directory uploads ####
+
+##path watches for file changes while service triggers and updates the directory context for containers and uploads from Kubernetes 
+
+
+#sudo systemctl daemon-reexec
+#sudo systemctl daemon-reload
+#sudo systemctl enable --now restorecon.path
